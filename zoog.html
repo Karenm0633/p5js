@@ -1,0 +1,73 @@
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.js"></script>
+    
+    <script>
+        function setup() {
+            createCanvas(800,600);
+        }
+
+        function draw() {
+            //This shows how the back is going to look 
+            background(140,96,58)
+            //This goes on the color of the body and how thick i want the circle
+            strokeWeight(6);
+            fill(244,66,66);
+            ellipse(400,300,200,200);
+            //This is ines that go towards the antennas and the wings 
+            line(400,200,380,400);
+            line(400,200,420,400);
+            line(420,145,444,120);
+            line(360,120,380,144);
+           //This is the head of the ladybug and it being filled in
+            fill(0,0,0)
+            ellipse(400,170,80,60);
+            //This is part of how the spots on the ladybug are 
+            point(360,340);
+            point(380,240);
+            point(440,280);
+            point(450,300);
+            point(340,360);
+            point(340,250,20,20)
+            point(360,250,20,20);
+            point(320,330,20,20);
+            point(320,310,20,20);
+            point(340,310,20,20);
+            point(330,280,20,20);
+            point(350,280,20,20);
+            point(440,280,20,20);
+            point(440,260,20,20);
+            point(430,320,20,20);
+            //This is the little circles(antennas) of the ladybug
+            ellipse(449,120,20,20);
+            ellipse(360,120,20,20);
+           
+            //These are also part of the ladybug spots  
+            rect(350,240,10,10);
+            rect(450,240,10,10);
+            rect(350,300,10,10);
+            rect(450,350,10,10);
+           
+            //This is where i had to put in the text and put in color
+            fill(7,7,7);
+            textSize(55);
+            stroke(255,255,0);
+            text("   Ladybug",260,540)
+            stroke(0);
+          
+          
+        }
+    </script>
+</head>
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/karenm0633/p5js/blob/master/zoog.html?footer=0"></script>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+</body
+</html>
