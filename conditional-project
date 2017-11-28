@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.js"></script>
+
+    <script>
+        var partner1;
+        var partner2;
+
+        function setup() {
+            background(200);
+            createCanvas(500, 500);
+            partner1 = 255;
+            partner2 = true;
+        }
+
+        function draw() {
+            if (partner2 =true) {
+                if (partner1 <= 0) {
+                    background(250, 0, 0);
+                    text("You won! CONGRATS", 250, 250);
+                    partner2 = false;
+                }
+                    else if(partner1 >= 500) {
+                    background(255,0, 0);
+                    text("CONGRATS,You won)",200,200,250,250);
+                    partner2 = false;
+                }
+                fill(random(255, 0), random(255, 0), random(255, 0));
+                ellipse(partner1, 450, partner1, height);
+            }
+        }
+
+        function keyPressed() {
+            if (keyCode == 32) {
+                partner1 = 250;
+                background(200);
+                partner2 = true;
+            }
+            if (partner2 == true) {
+                if (key =="q" ||key== "Q") {
+                    background(200);
+                    partner1 -= 10;
+                    redraw();
+                }
+                else if (key == "w" || key=="W") {
+                    background(200);
+                    partner1 -= 10;
+                    redraw();
+                }
+                else if (key == "j" || key=="J") {
+                    background(200);
+                    partner1 += 10;
+                    redraw();
+                }
+                else if (key == "k" ||key== "K") {
+                    background(200);
+                    partner1 += 10;
+                    redraw();
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/karenm0633/p5js/blob/master/conditionals-project.html?footer=0"></script>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+</body>
+</html>
